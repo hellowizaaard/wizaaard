@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "@styles/globals.css";
+import Navbar from "@/components/public/shared/Navbar";
+import Footer from "@/components/public/shared/Footer";
 // import localFont from "next/font/local";
 
 // const geistSans = localFont({
@@ -24,11 +26,10 @@ export default function PublicRootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-      >
-        {children}
-      </body>
-    </html>
+    <div>
+      <Navbar />
+      <main className="min-h-[calc(100vh-160px)] universal-padding">{children}</main>
+      <Footer />
+    </div>
   );
 }
