@@ -8,3 +8,6 @@
     @apply px-[50px];
   }
 }
+.heading-primary {
+  @apply flex justify-center text-white text-center antialiased tracking-[-4.2px] mt-6 leading-10;
+}

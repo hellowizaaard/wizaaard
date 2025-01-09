@@ -8,7 +8,11 @@ export default {
   ],
   mode: 'jit',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["var(--poppins)"]
+      }
+    },
   },
   plugins: [],
 } satisfies Config;
