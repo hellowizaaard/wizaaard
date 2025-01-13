@@ -5,7 +5,7 @@ import NavLink from '../ui/Navlink'
 
 const Navbar = () => {
     return (
-        <nav className="h-[80px] px-[50px] flex justify-between items-center py-4 bg-white shadow-md">
+        <nav className="h-[80px] px-[50px] flex justify-between items-center py-4 bg-white">
             {/* Logo */}
             <div className="text-2xl font-bold">
                 <Link href="/" className="flex items-center">

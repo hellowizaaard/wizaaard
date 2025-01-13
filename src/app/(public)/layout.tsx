@@ -16,7 +16,7 @@ import Footer from "@/components/public/shared/Footer";
 // });
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home | Wezard",
   description: "Wizard",
 };
 
@@ -28,7 +28,7 @@ export default function PublicRootLayout({
   return (
     <div>
       <Navbar />
-      <main className="min-h-[calc(100vh-160px)] universal-padding">{children}</main>
+      <main className="min-h-[calc(100vh-160px)] universal-padding relative">{children}</main>
       <Footer />
     </div>
   );
