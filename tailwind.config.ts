@@ -11,6 +11,10 @@ export default {
     extend: {
       fontFamily: {
         poppins: ["var(--poppins)"]
+      },
+      borderRadius: {
+        cta: "15px",
+        input: "20px"
       }
     },
   },

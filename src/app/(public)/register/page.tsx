@@ -1,5 +1,6 @@
 "use client"
 
+import Divider from "@/components/public/ui/Divider";
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -10,6 +11,7 @@ type FormData = {
 };
 
 const RegisterPage = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { register, handleSubmit, watch } = useForm<FormData>({
         defaultValues: {
             role: "Graphic Designer",
@@ -21,21 +23,23 @@ const RegisterPage = () => {
         console.log("Registration Data:", data);
     };
 
-    const selectedMethod = watch("signupMethod");
+    // const selectedMethod = watch("signupMethod");
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-[#F2F1F6] rounded-[30px]">
             <div className="w-full max-w-md p-6 bg-white shadow-lg rounded-lg">
+                <h2 className="text-2xl font-semibold text-center text-gray-800">Register</h2>
+                <Divider className="w-[100px]" />
                 {/* Already have an account */}
-                <div className="text-sm mb-6">
+                <div className="text-sm my-6">
                     Already have an account?{" "}
-                    <Link href="/login" className="font-semibold">
+                    <Link href="/login" className="font-semibold hover:underline">
                         Log in
                     </Link>
                 </div>
 
                 {/* Form */}
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="">
                     {/* Dropdown: What do you do? */}
                     <div>
                         <label className="block text-2xl font-bold mb-2">What do you do?</label>
@@ -87,7 +91,7 @@ const RegisterPage = () => {
                     {/* Continue Button */}
                     <button
                         type="submit"
-                        className="w-full bg-[#003062] text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003062] focus:ring-offset-2"
+                        className="mt-[50px] w-full bg-[#003062] text-white py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003062] focus:ring-offset-2"
                     >
                         Continue
                     </button>

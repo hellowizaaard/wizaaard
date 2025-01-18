@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import Divider from '@/components/public/ui/Divider';
 
 interface FromDataTypes {
     email: string;
     password: string;
-    remember: boolean;
 }
 
 const LoginPage = () => {
@@ -31,9 +31,9 @@ const LoginPage = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-[#F2F1F6] rounded-[30px]">
             <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Login</h2>
-
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <h2 className="text-2xl font-semibold text-center text-gray-800">Login</h2>
+                <Divider className="w-[70px]" />
+                <form className='mt-6' onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-4">
                         <Link href="/register" className="text-sm hover:underline">
                             Don&apos;t have an account? <span className='font-semibold'>Register now</span>
@@ -85,21 +85,12 @@ const LoginPage = () => {
                         )}
                     </div>
 
-                    <div className="flex items-center mb-4">
-                        <input
-                            id="remember"
-                            type="checkbox"
-                            {...register('remember')}
-                            className="h-4 w-4 text-blue-600 cursor-pointer focus:ring-blue-500 border-gray-300 rounded"
-                        />
-                        <label htmlFor="remember" className="ml-2 text-sm cursor-pointer text-gray-700">
-                            Forget Password? Then Login with OTP
-                        </label>
-                    </div>
+                    <Link href="/otp" className='text-blue-500 hover:underline'>
+                        Forget Password? Then Login with OTP</Link>
 
                     <button
                         type="submit"
-                        className="w-full bg-[#003062] text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003062] focus:ring-offset-2"
+                        className="mt-[52px] w-full bg-[#003062] text-white py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003062] focus:ring-offset-2"
                     >
                         Continue
                     </button>

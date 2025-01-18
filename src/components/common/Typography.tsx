@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge';
 
 // Define different text types (you can extend this)
 const textTypes = {
-    h1: 'text-6xl font-semibold',
+    h1: 'text-[36px] font-semibold',
     h2: 'text-3xl font-medium',
     h3: 'text-lg font-medium',
     p: 'text-base font-normal',
