@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import "@styles/globals.css";
-import Navbar from "@/components/public/shared/Navbar";
-import Footer from "@/components/public/shared/Footer";
+import type { Metadata } from 'next';
+import '@styles/globals.css';
+import Navbar from '@/components/public/shared/Navbar';
+import Footer from '@/components/public/shared/Footer';
 // import localFont from "next/font/local";
 
 // const geistSans = localFont({
@@ -16,8 +16,8 @@ import Footer from "@/components/public/shared/Footer";
 // });
 
 export const metadata: Metadata = {
-  title: "Home | Wezard",
-  description: "Wizard",
+  title: 'Home | Wezard',
+  description: 'Wizard',
 };
 
 export default function PublicRootLayout({
@@ -28,7 +28,9 @@ export default function PublicRootLayout({
   return (
     <div>
       <Navbar />
-      <main className="min-h-[calc(100vh-160px)] universal-padding relative">{children}</main>
+      <main className=" min-h-[calc(100vh-160px)] universal-padding relative">
+        {children}
+      </main>
       <Footer />
     </div>
   );

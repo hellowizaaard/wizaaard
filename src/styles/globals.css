@@ -7,6 +7,9 @@
   .universal-padding {
     @apply px-[50px];
   }
+  .fix-width {
+    @apply max-w-[1440px] mx-auto;
+  }
 }
 .heading-primary {
   @apply flex justify-center text-white text-center antialiased tracking-[-4.2px] mt-6 leading-10;
