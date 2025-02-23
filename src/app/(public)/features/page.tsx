@@ -1,5 +1,5 @@
 import Typography from '@/components/common/Typography';
-import Card from '@/components/public/ui/Card';
+import Card from '@/components/ui/Card';
 import React from 'react';
 
 const FeaturePage = () => {
