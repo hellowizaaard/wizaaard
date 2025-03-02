@@ -5,8 +5,14 @@ import React from 'react';
 import { BsFillPlayFill } from 'react-icons/bs';
 // @ts-expect-error: TypeScript cannot resolve files in the public folder
 import resumeView from '../../../public/images/wiz-home.PNG';
+import { auth } from '@/utils/auth';
+import { redirect } from 'next/navigation';
 
-const MotherPage = () => {
+const MotherPage = async () => {
+  const session = await auth();
+  console.log('session', session);
+
+  if (!session?.user) redirect('/login');
   return (
     <div className="relative font-poppins">
       {/* Background that spans the full viewport */}
@@ -56,12 +62,18 @@ const MotherPage = () => {
           >
             Join now for free
           </Link>
-          <Link
-            href="/login"
-            className="px-6 py-3 bg-white text-black rounded-2xl text-xs font-medium hover:bg-gray-400"
-          >
-            Login
-          </Link>
+          {session.user.name ? (
+            <div className="px-6 py-3 bg-white text-black rounded-2xl text-xs font-medium hover:bg-gray-400">
+              {session.user.name}
+            </div>
+          ) : (
+            <Link
+              href="/login"
+              className="px-6 py-3 bg-white text-black rounded-2xl text-xs font-medium hover:bg-gray-400"
+            >
+              Login
+            </Link>
+          )}
           <Link
             href="/join"
             className="flex items-center px-8 py-2 bg-transparent text-white border border-white rounded-2xl text-xs font-medium hover:bg-gray-400"

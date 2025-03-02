@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import Divider from '@/components/ui/Divider';
+import SocialLoginForm from '@/components/public/login/SocialLoginForm';
 
 interface FromDataTypes {
   email: string;
@@ -67,7 +68,7 @@ const LoginPage = () => {
             )}
           </div>
 
-          <div className="mb-4 relative">
+          <div className="relative">
             <label
               htmlFor="password"
               className="block text-sm font-medium text-gray-700"
@@ -110,11 +111,15 @@ const LoginPage = () => {
 
           <button
             type="submit"
-            className="mt-[52px] w-full bg-[#003062] text-white py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003062] focus:ring-offset-2"
+            className="mt-8 w-full bg-[#003062] text-white py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003062] focus:ring-offset-2"
           >
             Continue
           </button>
         </form>
+
+        <div className="my-4 text-center text-slate-400 text-lg">OR</div>
+
+        <SocialLoginForm />
 
         <p className="text-sm text-center text-gray-600 mt-6">
           By clicking &quot;Register now/Login&quot; you agree to our
