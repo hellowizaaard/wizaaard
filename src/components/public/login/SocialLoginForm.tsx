@@ -1,4 +1,4 @@
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/ui/Typography';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import { SocialLogin } from '@/actions';

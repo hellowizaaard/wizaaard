@@ -1,15 +1,16 @@
 'use server';
 
-import { signIn } from '@/utils/auth';
+import { signIn, signOut } from '@/utils/auth';
 
-export async function SocialLogin(formData) {
-  console.log('form data', formData);
-  const action = formData.get('action');
+export async function SocialLogin(formData: FormData) {
+  const action = formData.get('action') as string;
   await signIn(action, {
-    redirectTo: '/',
+    redirectTo: '/dashboard',
   });
 
   // console.log('action', action);
 }
 
-export async function Logout() {}
+export async function Logout() {
+  await signOut({ redirectTo: '/' });
+}

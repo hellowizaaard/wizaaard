@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/ui/Typography';
 import Divider from '@/components/ui/Divider';
 
 interface FromDataTypes {

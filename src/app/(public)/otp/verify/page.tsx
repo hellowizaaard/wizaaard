@@ -1,6 +1,6 @@
 'use client';
 
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/ui/Typography';
 import Divider from '@/components/ui/Divider';
 import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';

@@ -1,4 +1,4 @@
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/ui/Typography';
 import Card from '@/components/ui/Card';
 import React from 'react';
 

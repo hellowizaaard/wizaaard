@@ -1,5 +1,5 @@
 // components/ui/Card.tsx
-import Typography from '@/components/common/Typography';
+import Typography from '@/components/ui/Typography';
 import React from 'react';
 
 interface CardProps {
