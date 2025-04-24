@@ -46,7 +46,7 @@ const Navbar = async () => {
         )}
         <Link
           href="/join"
-          className="px-4 py-2 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-800"
+          className="px-4 py-3 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-800"
         >
           Join now
         </Link>
