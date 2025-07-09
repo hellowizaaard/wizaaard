@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { BsFillPlayFill } from 'react-icons/bs';
 import resumeView from '../../../public/images/hero-banner.png';
 import Typography from '@/components/ui/Typography';
 import { TbPlayerPlayFilled } from 'react-icons/tb';
