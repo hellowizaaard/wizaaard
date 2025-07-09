@@ -5,7 +5,7 @@
 /* Add custom utility class */
 @layer utilities {
   .universal-padding {
-    @apply px-[50px];
+    @apply px-[10px];
   }
   .fix-width {
     @apply max-w-[1440px] mx-auto;

@@ -2,12 +2,12 @@ import Typography from '@/components/ui/Typography';
 import Card from '@/components/ui/Card';
 import React from 'react';
 
-const ContactPage = () => {
+const MentorsPage = () => {
   return (
     <div className="w-[calc(100%-0px)] lg:w-[calc(100%-350px)] xl:lg:w-[calc(100%-450px)] mx-auto ">
       <div className="w-full flex items-end mb-[30px]">
         <Typography className="text-5xl font-bold whitespace-nowrap">
-          Contact Wezard
+          Mentors Wezard
         </Typography>
         <div className="flex-1 border-b border-gray-400 ml-2" />
       </div>
@@ -47,4 +47,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default MentorsPage;

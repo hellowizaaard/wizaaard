@@ -2,90 +2,85 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { BsFillPlayFill } from 'react-icons/bs';
-// @ts-expect-error: TypeScript cannot resolve files in the public folder
-import resumeView from '../../../public/images/wiz-home.PNG';
+import resumeView from '../../../public/images/hero-banner.png';
 import Typography from '@/components/ui/Typography';
+import { TbPlayerPlayFilled } from 'react-icons/tb';
 
 const MotherPage = async () => {
   return (
-    <div className="relative font-poppins">
+    <div className="font-poppins">
       {/* Background that spans the full viewport */}
-      <div className="absolute inset-0 -left-[50px] -right-[50px] bg-[#003062] -z-10"></div>
+      <div className="fix-width bg-heroBackground rounded-md">
+        <div className="pt-[61px] px-[38px] grid grid-cols-4 gap-4">
+          <div className="col-span-3">
+            <Typography as="p" type="p" className="text-white">
+              More than a resume builder
+            </Typography>
+            <Typography
+              as="h1"
+              type="h1"
+              className="text-white whitespace-nowrap"
+            >
+              Your <span className="text-primary">resume</span> profile is your
+            </Typography>
+            <Typography
+              as="h1"
+              type="h1"
+              className="text-white whitespace-nowrap"
+            >
+              personal <span className="text-primary">marketing</span> tool!
+            </Typography>
+            <Typography
+              as="p"
+              type="p"
+              className="text-white mt-[43px] mb-[90px]"
+            >
+              &quot;Wizaaard is the world’s first website experience
+              platform—empowering both rising and seasoned professionals to
+              create, manage, and optimize digital profiles that truly represent
+              who they are.&quot;
+            </Typography>
+          </div>
+          <div className="flex flex-col items-center -mt-3">
+            <div className="p-[28px] bg-slate-500 rounded-full">
+              <div className="p-[34px] bg-gray-400 rounded-full">
+                <div className="p-[29px] bg-gray-300 rounded-full">
+                  <div className="p-5 bg-white rounded-full">
+                    <TbPlayerPlayFilled className="w-[34px] h-[34px]" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-[30px]">
+              <div>
+                <Link
+                  href="/join"
+                  className="px-[75px] py-[15px] bg-primary text-white rounded-[10px] text-sm font-semibold hover:bg-white hover:text-black"
+                >
+                  Join now for free
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="px-[38px]">
+          <div className="flex justify-center bg-slate-500 rounded-tl-[32px] rounded-tr-[32px] p-5 border-[2px] border-textGrey ">
+            <Image
+              src={resumeView}
+              alt="Resume view image"
+              property="true"
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Main Content */}
-      <div className="py-[50px]">
-        <Typography as="h3" type="h3" className="text-white text-center">
-          More than a resume builder
-        </Typography>
-        <Typography as="h1" type="h1" className="heading-primary">
-          Your{' '}
-          <span className="bg-blue-500 block max-w-fit ml-2.5 mr-1 pt-1 pb-2 pr-2">
-            resume
-          </span>{' '}
-          profile is your
-        </Typography>
-        <Typography as="h1" type="h1" className="heading-primary">
-          personal{' '}
-          <span className="bg-blue-500 block max-w-fit ml-2.5 mr-1 pt-1 pb-2 pr-2">
-            marketing
-          </span>{' '}
-          tool!
-        </Typography>
-        <div className="mt-[22px] mb-12">
-          <Typography
-            as="p"
-            type="p"
-            className="text-white text-center font-light"
-          >
-            As the first-ever website experience platform, Wezard lets
-            experience & upcoming professionals
-          </Typography>
-          <Typography
-            as="p"
-            type="p"
-            className="text-white text-center font-light"
-          >
-            come together to build, manage, and optimize digital profile
-            experiences that express them.
-          </Typography>
-        </div>
-        <div className="flex justify-center items-center space-x-1">
-          <Link
-            href="/join"
-            className="px-6 py-3 bg-white text-black rounded-2xl text-xs font-medium hover:bg-gray-400"
-          >
-            Join now for free
-          </Link>
-
-          <Link
-            href="/login"
-            className="px-8 py-3 bg-blue-500 text-white rounded-2xl text-xs font-medium hover:bg-gray-400"
-          >
-            Login
-          </Link>
-
-          <Link
-            href="/join"
-            className="flex items-center px-8 py-2 bg-transparent text-white border border-white rounded-2xl text-xs font-medium hover:bg-gray-400"
-          >
-            Watch Demo
-            <BsFillPlayFill color="white" className="w-6 h-6" />
-          </Link>
-        </div>
-      </div>
-
-      {/* Image Section */}
-      <div className="flex justify-center overflow-hidden">
-        <Image
-          src={resumeView}
-          alt="Resume view image"
-          property="true"
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-          }}
-        />
-      </div>
     </div>
   );
 };

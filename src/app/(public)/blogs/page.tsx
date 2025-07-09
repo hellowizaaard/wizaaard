@@ -2,7 +2,7 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import React from 'react';
 
-const BlogPage = () => {
+const JobsPage = () => {
   return (
     <div>
       <div className="w-full flex items-end mb-[30px]">
@@ -43,4 +43,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default JobsPage;

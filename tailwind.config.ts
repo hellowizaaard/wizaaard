@@ -9,6 +9,11 @@ export default {
   mode: 'jit',
   theme: {
     extend: {
+      colors: {
+        textGrey: "#E3E3E3",
+        primary: "#00A1ED",
+        heroBackground: "#000D33"
+      },
       fontFamily: {
         poppins: ["var(--poppins)"]
       },

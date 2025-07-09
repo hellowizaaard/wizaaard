@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blogs | Wezard',
+  title: 'Jobs | Wezard',
   description: 'Wizard Blogs page',
 };
 
-export default function BlogsLayout({
+export default function JobsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

@@ -4,6 +4,7 @@ import React from 'react';
 import NavLink from '../ui/Navlink';
 import { auth } from '@/utils/auth';
 import { Logout } from '@/actions';
+import Image from 'next/image';
 
 const Navbar = async () => {
   const session = await auth();
@@ -13,15 +14,19 @@ const Navbar = async () => {
       {/* Logo */}
       <div className="text-2xl font-bold">
         <Link href="/" className="flex items-center">
-          <span className="text-black">wez</span>
-          <span className="text-blue-600">ard</span>
+          <Image alt="logo" src="/logo.png" width={150} height={29} />
         </Link>
       </div>
 
       {/* Navigation Links */}
-      <ul className="flex space-x-6 text-sm font-medium text-gray-700">
+      <ul className="bg-textGrey p-[3px] pr-3 font-poppins text-[14px] font-normal rounded-[10px] flex items-center space-x-3 text-sm text-black">
         {navLinks.map((link) => (
-          <NavLink key={link.href} href={link.href} label={link.label} />
+          <NavLink
+            key={link.href}
+            href={link.href}
+            label={link.label}
+            icon={link.icon}
+          />
         ))}
       </ul>
 
@@ -31,7 +36,7 @@ const Navbar = async () => {
           <form action={Logout}>
             <button
               type="submit"
-              className="px-8 py-3 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-gray-400"
+              className="px-[25px] py-4 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-gray-400"
             >
               logout
             </button>
@@ -39,14 +44,14 @@ const Navbar = async () => {
         ) : (
           <Link
             href="/login"
-            className="px-8 py-3 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-gray-400"
+            className="font-poppins px-[25px] py-4 bg-white text-black border border-textGrey rounded-md text-sm font-medium"
           >
             Login
           </Link>
         )}
         <Link
           href="/join"
-          className="px-4 py-3 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-800"
+          className="font-poppins px-[25px] py-4 bg-primary text-white rounded-md text-sm font-medium"
         >
           Join now
         </Link>

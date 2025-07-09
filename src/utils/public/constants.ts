@@ -1,11 +1,15 @@
+
+
 export const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/features", label: "Features" },
-    { href: "/about", label: "About" },
-    { href: "/blogs", label: "Blogs" },
+    { href: "/resume", label: "Resume" },
+    { href: "/professionals", label: "Professionals" },
+    { href: "/blogs", label: "Jobs" },
+    { href: "/contact", label: "Mentors" },
     { href: "/faqs", label: "FAQs" },
-    { href: "/contact", label: "Contact" },
+    { href: "#", label: "More", icon: true },
 ];
+
 
 export const socialLinks = [
     { href: "https://facebook.com", label: "Facebook" },

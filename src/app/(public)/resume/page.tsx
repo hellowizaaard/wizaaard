@@ -2,7 +2,7 @@ import Typography from '@/components/ui/Typography';
 import Card from '@/components/ui/Card';
 import React from 'react';
 
-const FeaturePage = () => {
+const ResumePage = () => {
   return (
     <div>
       <Typography className="text-5xl font-bold text-center mb-[30px]">
@@ -44,4 +44,4 @@ const FeaturePage = () => {
   );
 };
 
-export default FeaturePage;
+export default ResumePage;

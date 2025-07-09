@@ -1,5 +1,5 @@
 import Accordion from '@/components/ui/Accordion';
-import Input from '@/components/ui/input';
+import Input from '@/components/ui/Input';
 import Typography from '@/components/ui/Typography';
 import React from 'react';
 
