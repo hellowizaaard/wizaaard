@@ -9,7 +9,7 @@ const MotherPage = async () => {
   return (
     <div className="font-poppins">
       {/* Background that spans the full viewport */}
-      <div className="fix-width bg-heroBackground rounded-md">
+      <div className="fix-width bg-gradient-to-b from-[#0A1633] via-[#0A1633] to-[#c1ceea] rounded-md">
         <div className="pt-[61px] px-[38px] grid grid-cols-4 gap-4">
           <div className="col-span-3">
             <Typography as="p" type="p" className="text-white">
@@ -65,21 +65,42 @@ const MotherPage = async () => {
 
         {/* Image Section */}
         <div className="px-[38px]">
-          <div className="flex justify-center bg-slate-500 rounded-tl-[32px] rounded-tr-[32px] p-5 border-[2px] border-textGrey ">
+          <div className="relative flex justify-center bg-slate-500 rounded-tl-[32px] rounded-tr-[32px] p-5 border-[2px] border-textGrey overflow-hidden">
             <Image
               src={resumeView}
               alt="Resume view image"
-              property="true"
               style={{
                 maxWidth: '100%',
-                height: 'auto',
+                height: '520px',
               }}
             />
+            {/* Fade overlay */}
+            <div className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent" />
           </div>
         </div>
       </div>
-
-      {/* Main Content */}
+      {/* Button Grid Section */}
+      <div className="px-[38px] flex flex-wrap gap-4 justify-center relative z-10">
+        <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
+          Graphic Designer
+        </button>
+        <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
+          EEE Engineer
+        </button>
+        <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
+          Full-stack Developer
+        </button>
+        <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
+          Content Writer
+        </button>
+        <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
+          Advocate
+        </button>
+        <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
+          Motion Designer
+        </button>
+        {/* ...add more as needed */}
+      </div>
     </div>
   );
 };
