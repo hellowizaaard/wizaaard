@@ -5,6 +5,7 @@ import resumeView from '../../../public/images/hero-banner.png';
 import Typography from '@/components/ui/Typography';
 import { TbPlayerPlayFilled } from 'react-icons/tb';
 import HowWizaaardWorksSection from '@/components/public/Home/HowWizaaardWorksSection';
+import QuickStepSection from '@/components/public/Home/QuickStepSection';
 
 const MotherPage = async () => {
   return (
@@ -192,6 +193,9 @@ const MotherPage = async () => {
 
       <div className="mt-10 fix-width px-[38px]">
         <HowWizaaardWorksSection />
+      </div>
+      <div className="mt-10 fix-width px-[38px] ">
+        <QuickStepSection />
       </div>
     </div>
   );
