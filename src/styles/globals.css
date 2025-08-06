@@ -14,3 +14,11 @@
 .heading-primary {
   @apply flex justify-center text-white text-center antialiased tracking-[-4.2px] mt-6 leading-10;
 }
+
+.common-border {
+  @apply border border-textGrey rounded-2xl;
+}
+
+.effortless-resume-nav {
+  @apply font-light text-[14px] leading-[21px] tracking-[-0.05em] font-poppins;
+}

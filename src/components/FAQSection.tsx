@@ -1,0 +1,80 @@
+'use client';
+
+import React from 'react';
+import Accordion from '../components/ui/Accordion';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqItems: FAQItem[] = [
+  {
+    question: 'What is Wizaaard?',
+    answer:
+      'Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a.',
+  },
+  {
+    question: 'Is Wizaaard free to use?',
+    answer:
+      'Lorem ipsum is simply dummy text of the printing and typesetting industry.',
+  },
+  {
+    question: 'Can I apply to jobs directly from Wizaaard?',
+    answer:
+      'Lorem ipsum is simply dummy text of the printing and typesetting industry.',
+  },
+  {
+    question: 'Are the resume templates ATS-friendly?',
+    answer:
+      'Lorem ipsum is simply dummy text of the printing and typesetting industry.',
+  },
+  {
+    question: 'Is my data safe on Wizaaard?',
+    answer:
+      'Lorem ipsum is simply dummy text of the printing and typesetting industry.',
+  },
+];
+
+export const FAQSection: React.FC = () => {
+  return (
+    <section className=" bg-f8f8f8 border border-textGrey rounded-2xl mt-10">
+      <div className="fix-width grid grid-cols-1 md:grid-cols-2 gap-8 px-10 py-[55px]">
+        {/* Left Column - Text and Button */}
+        <div className="grid grid-cols-6">
+          <p className="col-span-2 text-[18px] font-medium">FAQs</p>
+          <div className="col-span-4 flex flex-col">
+            <h2 className="text-4xl font-bold mb-8">
+              Answers to the questions you may have in your mind...
+            </h2>
+            <div className="mt-auto">
+              <button
+                className="px-6 py-3 bg-transparent text-black border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                onClick={() => {
+                  // Handle view all FAQs
+                }}
+              >
+                View all FAQs
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Accordions */}
+        <div className="space-y-4">
+          {faqItems.map((item, index) => (
+            <Accordion
+              key={index}
+              title={item.question}
+              defaultOpen={index === 0 ? true : false}
+            >
+              <p>{item.answer}</p>
+            </Accordion>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FAQSection;

@@ -12,7 +12,8 @@ export default {
       colors: {
         textGrey: "#E3E3E3",
         primary: "#00A1ED",
-        heroBackground: "#000D33"
+        heroBackground: "#000D33",
+        f8f8f8: "#F8F8F8"
       },
       fontFamily: {
         poppins: ["var(--poppins)"]

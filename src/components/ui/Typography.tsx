@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-// Define different text types (you can extend this)
+// Define different text types
 const textTypes = {
   h1: 'text-[84px] font-semibold leading-[90px] tracking-tighter font-poppins',
   h2: 'text-3xl font-medium',
@@ -12,10 +12,10 @@ const textTypes = {
 };
 
 type TypographyProps = {
-  as?: keyof JSX.IntrinsicElements; // Element type (e.g., 'p', 'h1', 'h2')
-  className?: string; // Additional class names to apply
-  children: React.ReactNode; // The content to be rendered
-  type?: 'h1' | 'h2' | 'h3' | 'p' | 'caption'; // Typography type, with possible predefined options
+  as?: keyof JSX.IntrinsicElements;
+  className?: string;
+  children: React.ReactNode;
+  type?: 'h1' | 'h2' | 'h3' | 'p' | 'caption';
 };
 
 const Typography = ({
@@ -25,10 +25,9 @@ const Typography = ({
   type = 'p',
   ...props
 }: TypographyProps) => {
-  // Default element is 'p'
   const Component = as;
 
-  // Merge custom classes with the type's default and add `text-white` if no color is provided
+  // Merge custom classes with the type's default
   const mergedClassNames = twMerge(clsx(textTypes[type], className));
 
   return (
