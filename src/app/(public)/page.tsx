@@ -6,6 +6,8 @@ import Typography from '@/components/ui/Typography';
 import { TbPlayerPlayFilled } from 'react-icons/tb';
 import HowWizaaardWorksSection from '@/components/public/Home/HowWizaaardWorksSection';
 import QuickStepSection from '@/components/public/Home/QuickStepSection';
+import FAQSection from '@/components/FAQSection';
+import Marquee from 'react-fast-marquee';
 
 const MotherPage = async () => {
   return (
@@ -102,101 +104,142 @@ const MotherPage = async () => {
         </div>
       </div>
       {/* Button Grid Section */}
-      <div className="mt-10 fix-width px-[38px] flex flex-col space-y-[22px]">
-        <div className=" flex flex-wrap gap-4 justify-between relative z-10">
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Graphic Designer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            EEE Engineer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Full-stack Developer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Content Writer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Advocate
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Motion Designer
-          </button>
-          {/* ...add more as needed */}
-        </div>
-        <div className=" flex flex-wrap gap-4 justify-between relative z-10">
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            EEE Engineer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Full-stack Developer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Content Writer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Advocate
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Motion Designer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Graphic Designer
-          </button>
+      <div className="mt-10 fix-width px-[38px] flex flex-col space-y-[22px] overflow-hidden">
+        <Marquee
+          direction="left"
+          speed={40}
+          className="relative z-10"
+          gradient={true}
+          gradientColor="#FFFFFF"
+        >
+          <div className="flex gap-6 mx-2">
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Frontend Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Graphic Designer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              EEE Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Full-stack Developer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Content Writer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Advocate
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Motion Designer
+            </button>
+          </div>
+        </Marquee>
 
-          {/* ...add more as needed */}
-        </div>
-        <div className=" flex flex-wrap gap-4 justify-between relative z-10">
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Graphic Designer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            EEE Engineer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Full-stack Developer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Content Writer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Advocate
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Motion Designer
-          </button>
-          {/* ...add more as needed */}
-        </div>
-        <div className=" flex flex-wrap gap-4 justify-between relative z-10">
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            EEE Engineer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Full-stack Developer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Content Writer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Advocate
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Motion Designer
-          </button>
-          <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow">
-            Graphic Designer
-          </button>
+        <Marquee
+          direction="right"
+          speed={40}
+          className="relative z-10"
+          gradient={true}
+          gradientColor="#FFFFFF"
+        >
+          <div className="flex gap-6 mx-2">
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Frontend Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Web Developer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              UI/UX Designer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Product Manager
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Data Scientist
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              DevOps Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Software Architect
+            </button>
+          </div>
+        </Marquee>
 
-          {/* ...add more as needed */}
-        </div>
+        <Marquee
+          direction="left"
+          speed={40}
+          className="relative z-10"
+          gradient={true}
+          gradientColor="#FFFFFF"
+        >
+          <div className="flex gap-6 mx-2">
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Frontend Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Digital Marketer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Business Analyst
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Cloud Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              ML Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              System Admin
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Network Engineer
+            </button>
+          </div>
+        </Marquee>
+
+        <Marquee
+          direction="right"
+          speed={40}
+          className="relative z-10"
+          gradient={true}
+          gradientColor="#FFFFFF"
+        >
+          <div className="flex gap-6 mx-2">
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Frontend Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Mobile Developer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Game Developer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Security Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              QA Engineer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Frontend Developer
+            </button>
+            <button className="bg-white border border-gray-300 rounded-lg px-6 py-3 shadow whitespace-nowrap">
+              Backend Developer
+            </button>
+          </div>
+        </Marquee>
       </div>
 
-      <div className="mt-10 fix-width px-[38px]">
+      <div className="mt-10 px-[38px]">
         <HowWizaaardWorksSection />
-      </div>
-      <div className="mt-10 fix-width px-[38px] ">
         <QuickStepSection />
+        <FAQSection />
       </div>
+      <div className="mt-10 fix-width px-[38px] "></div>
     </div>
   );
 };

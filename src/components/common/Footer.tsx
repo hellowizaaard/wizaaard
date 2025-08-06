@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 // import Image from 'next/image';
 // import Link from 'next/link';
@@ -10,10 +12,11 @@ import {
   FaEnvelope,
 } from 'react-icons/fa';
 import { TbBrandInstagramFilled } from 'react-icons/tb';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-white fix-width pt-8 pb-4 px-[38px]">
+    <footer className="bg-white pt-8 pb-4 px-[50px]">
       <div className=" grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* About */}
         <div className="col-span-5">
@@ -79,14 +82,31 @@ const Footer = () => {
           All Rights Reserved &amp; Copyright 2025
           <span className="font-bold ml-1">@wizaaardtechnology</span>
         </div>
-        <div className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl p-6 flex items-center justify-center w-[90px] h-[90px]">
-          <svg
+        <motion.div
+          className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl p-6 flex items-center justify-center w-[90px] h-[90px] cursor-pointer"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
+          }}
+        >
+          <motion.svg
             width="24"
             height="24"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
             className="text-[#23262F]"
+            initial={{ y: 0 }}
+            animate={{ y: [0, -4, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
           >
             <path
               strokeLinecap="round"
@@ -94,8 +114,8 @@ const Footer = () => {
               strokeWidth={2}
               d="M5 15l7-7 7 7"
             />
-          </svg>
-        </div>
+          </motion.svg>
+        </motion.div>
       </div>
     </footer>
   );

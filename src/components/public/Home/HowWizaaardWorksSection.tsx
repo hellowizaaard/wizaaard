@@ -85,37 +85,39 @@ const steps = [
 
 const HowWizaaardWorksSection = () => {
   return (
-    <section className="bg-[#DEE8F0] rounded-2xl p-6 md:p-10 mt-10">
-      <div className="mb-8 grid grid-cols-12">
-        <div className="col-span-2">
-          <p className="font-semibold text-sm">Features wizaaard –</p>
+    <section className="bg-[#DEE8F0] rounded-2xl mt-10">
+      <div className="fix-width p-6 md:p-10">
+        <div className="mb-8 grid grid-cols-12">
+          <div className="col-span-2">
+            <p className="font-semibold text-sm">Features wizaaard –</p>
+          </div>
+          <div className="col-span-10">
+            <h2 className="tracking-tighter text-3xl md:text-4xl md:leading-[60px] lg:text-[60px] font-semibold mt-2 mb-4">
+              How our platform makes your life more easier at expressing
+              yourself...
+            </h2>
+            <p className="text-base">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy
+              text ever since the 1500s, when an unknown printer took a galley
+              of type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
         </div>
-        <div className="col-span-10">
-          <h2 className="tracking-tighter text-3xl md:text-4xl md:leading-[60px] lg:text-[60px] font-semibold mt-2 mb-4">
-            How our platform makes your life more easier at expressing
-            yourself...
-          </h2>
-          <p className="text-base">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived
-            not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[100px]">
+          <HowWizaaardWorksCard />
+          {steps.map((step, idx) => (
+            <StepCard
+              key={idx}
+              step={step.step}
+              title={step.title}
+              description={step.description}
+              highlight={true}
+            />
+          ))}
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[100px]">
-        <HowWizaaardWorksCard />
-        {steps.map((step, idx) => (
-          <StepCard
-            key={idx}
-            step={step.step}
-            title={step.title}
-            description={step.description}
-            highlight={true}
-          />
-        ))}
       </div>
     </section>
   );

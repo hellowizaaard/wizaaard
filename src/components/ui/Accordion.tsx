@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import clsx from 'clsx';
+import { IoIosArrowDown } from 'react-icons/io';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type AccordionProps = {
   title: string;
@@ -14,7 +16,7 @@ type AccordionProps = {
 const Accordion: React.FC<AccordionProps> = ({
   title,
   children,
-  defaultOpen = false,
+  defaultOpen,
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -23,34 +25,56 @@ const Accordion: React.FC<AccordionProps> = ({
 
   const containerClass = twMerge(
     clsx(
-      'w-full border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden transition-all',
+      'bg-white w-full border p-6 border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden transition-all',
       className,
     ),
   );
 
   const headerClass = clsx(
-    'flex items-center justify-between px-4 py-3 cursor-pointer text-base font-medium',
-    'bg-gray-100 dark:bg-gray-800 text-black dark:text-white',
+    'flex items-center justify-between pl-4 cursor-pointer text-base font-medium',
+    ' dark:bg-gray-800 text-black dark:text-white',
   );
 
   return (
     <div className={containerClass}>
       <div className={headerClass} onClick={toggleAccordion}>
         <span>{title}</span>
-        <span className="text-xl">{isOpen ? '✖️' : '➕'}</span>
+        <motion.span
+          className="text-lg p-3 bg-f8f8f8 rounded-[15px]"
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
+        >
+          <IoIosArrowDown />
+        </motion.span>
       </div>
-      <div
-        className={clsx(
-          'transition-all duration-300 ease-in-out px-4 overflow-hidden',
-          isOpen ? 'max-h-[1000px] py-3' : 'max-h-0 py-0',
-        )}
-      >
+      <AnimatePresence initial={false}>
         {isOpen && (
-          <div className="text-sm text-gray-700 dark:text-gray-300">
-            {children}
-          </div>
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{
+              height: 'auto',
+              opacity: 1,
+              transition: {
+                height: { duration: 0.3 },
+                opacity: { duration: 0.2, delay: 0.1 },
+              },
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              transition: {
+                height: { duration: 0.3 },
+                opacity: { duration: 0.2 },
+              },
+            }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 bg-f8f8f8 rounded-[10px] mt-[14px] text-sm text-gray-700 dark:text-gray-300">
+              {children}
+            </div>
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </div>
   );
 };
