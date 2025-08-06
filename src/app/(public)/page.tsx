@@ -59,7 +59,7 @@ const MotherPage = async () => {
               <div className="mt-[30px]">
                 <div>
                   <Link
-                    href="/join"
+                    href="/register"
                     className="px-[75px] py-[15px] bg-primary text-white rounded-[10px] text-sm font-semibold hover:bg-white hover:text-black"
                   >
                     Join now for free

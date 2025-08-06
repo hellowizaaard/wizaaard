@@ -50,7 +50,7 @@ const Navbar = async () => {
           </Link>
         )}
         <Link
-          href="/join"
+          href="/register"
           className="font-poppins px-[25px] py-4 bg-primary text-white rounded-md text-sm font-medium"
         >
           Join now
