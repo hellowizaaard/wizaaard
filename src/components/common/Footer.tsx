@@ -16,8 +16,8 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-8 pb-4 px-[50px]">
-      <div className=" grid grid-cols-1 md:grid-cols-12 gap-6">
+    <footer className="bg-white pt-8 pb-4 px-[10px]">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* About */}
         <div className="col-span-5">
           <div className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl p-6 flex flex-col min-h-[180px]">
@@ -49,11 +49,11 @@ const Footer = () => {
           </div>
         </div>
         {/* Address */}
-        <div className="bg-[#FAFAFA] col-span-3 border border-[#E6E8EC] rounded-xl p-6 flex flex-col min-h-[180px]">
+        <div className="bg-[#FAFAFA] col-span-5 sm:col-span-3 border border-[#E6E8EC] rounded-xl p-6 flex flex-col min-h-[180px]">
           <h3 className="font-semibold text-lg mb-2">Address</h3>
         </div>
         {/* Socials */}
-        <div className="col-span-4 flex flex-col gap-4">
+        <div className="col-span-5 sm:col-span-4 flex flex-col gap-4">
           <div
             className="grid grid-cols-2 grid-rows-2 gap-4 h-full min-h-[180px]"
             style={{ height: '100%' }}
@@ -78,12 +78,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-row justify-between items-center mt-6">
-        <div className="text-base text-[#23262F]">
+        <div className="text-base text-center sm:text-left text-[#23262F]">
           All Rights Reserved &amp; Copyright 2025
-          <span className="font-bold ml-1">@wizaaardtechnology</span>
+          <span className="font-bold ml-1"> @wizaaardtechnology</span>
         </div>
         <motion.div
-          className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl p-6 flex items-center justify-center w-[90px] h-[90px] cursor-pointer"
+          className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl p-3 sm:p-6 flex items-center justify-center w-[55px] sm:w-[90px] h-[55px] sm:h-[90px] cursor-pointer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => {

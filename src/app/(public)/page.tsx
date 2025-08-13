@@ -13,32 +13,33 @@ const MotherPage = async () => {
   return (
     <div className="font-poppins ">
       {/* Background that spans the full viewport */}
-      <div className="bg-gradient-to-b from-[#0A1633] via-[#0A1633] to-[#c1ceea] rounded-md">
+      <div className="bg-gradient-to-b from-[#0A1633] via-[#0A1633] to-[#c1ceea] rounded-md pb-10 sm:pb-0">
         <div className="fix-width ">
-          <div className="pt-[61px] px-[38px] grid grid-cols-4 gap-4">
-            <div className="col-span-3">
+          <div className="pt-[61px] px-6 sm:px-[38px] md:grid md:grid-cols-4 md:gap-4">
+            <div className="md:col-span-3">
               <Typography as="p" type="p" className="text-white">
                 More than a resume builder
               </Typography>
               <Typography
                 as="h1"
                 type="h1"
-                className="text-white whitespace-nowrap"
+                className="text-white md:whitespace-nowrap"
               >
                 Your <span className="text-primary">resume</span> profile is
-                your
+                your <br className="hidden sm:block" /> personal{' '}
+                <span className="text-primary">marketing</span> tool!
               </Typography>
-              <Typography
+              {/* <Typography
                 as="h1"
                 type="h1"
-                className="text-white whitespace-nowrap"
+                className="text-white md:whitespace-nowrap"
               >
                 personal <span className="text-primary">marketing</span> tool!
-              </Typography>
+              </Typography> */}
               <Typography
                 as="p"
                 type="p"
-                className="text-white mt-[43px] mb-[90px]"
+                className="text-white mt-[43px] mb-[43px] sm:mb-[90px]"
               >
                 &quot;Wizaaard is the world’s first website experience
                 platform—empowering both rising and seasoned professionals to
@@ -85,7 +86,7 @@ const MotherPage = async () => {
           </div>
         </div> */}
           {/* Image Section */}
-          <div className="px-[38px]">
+          <div className="hidden md:block px-[38px]">
             <div className="relative flex justify-center bg-slate-500 rounded-tl-[32px] rounded-tr-[32px] p-5 border-[2px] border-b-0 border-textGrey overflow-hidden">
               <Image
                 src={resumeView}
@@ -104,7 +105,7 @@ const MotherPage = async () => {
         </div>
       </div>
       {/* Button Grid Section */}
-      <div className="mt-10 fix-width px-[38px] flex flex-col space-y-[22px] overflow-hidden">
+      <div className="mt-10 fix-width sm:px-[38px] flex flex-col space-y-[22px] overflow-hidden">
         <Marquee
           direction="left"
           speed={40}
@@ -234,7 +235,7 @@ const MotherPage = async () => {
         </Marquee>
       </div>
 
-      <div className="mt-10 px-[38px]">
+      <div className="mt-10">
         <HowWizaaardWorksSection />
         <QuickStepSection />
         <FAQSection />

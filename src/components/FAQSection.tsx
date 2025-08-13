@@ -39,11 +39,13 @@ const faqItems: FAQItem[] = [
 export const FAQSection: React.FC = () => {
   return (
     <section className=" bg-f8f8f8 border border-textGrey rounded-2xl mt-10">
-      <div className="fix-width grid grid-cols-1 md:grid-cols-2 gap-8 px-10 py-[55px]">
+      <div className="fix-width grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:px-10 sm:py-[55px]">
         {/* Left Column - Text and Button */}
         <div className="grid grid-cols-6">
-          <p className="col-span-2 text-[18px] font-medium">FAQs</p>
-          <div className="col-span-4 flex flex-col">
+          <p className="col-span-1 sm:col-span-2 text-[18px] font-medium">
+            FAQs
+          </p>
+          <div className="col-span-5 sm:col-span-4 flex flex-col">
             <h2 className="text-4xl font-bold mb-8">
               Answers to the questions you may have in your mind...
             </h2>

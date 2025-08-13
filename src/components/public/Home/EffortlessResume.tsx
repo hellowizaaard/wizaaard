@@ -15,14 +15,14 @@ const links = [
 const EffortlessResume = () => {
   return (
     <div className="bg-white p-3 common-border">
-      <div className="bg-f8f8f8 common-border py-[25px] px-10">
+      <div className="bg-f8f8f8 rounded-lg sm:common-border px-2 py-2 sm:py-[25px] sm:px-10">
         <ul className="flex justify-between items-center">
           {links.map((item, index) => (
             <li
               key={index}
               className={`${
                 index === 0
-                  ? 'font-semibold text-[14px]'
+                  ? 'font-semibold text-xs sm:text-[14px]'
                   : 'effortless-resume-nav'
               }`}
             >
@@ -35,7 +35,7 @@ const EffortlessResume = () => {
         <Typography
           as="h2"
           type="h2"
-          className="text-2xl md:text-5xl font-semibold leading-[70px] tracking-tighter mb-20"
+          className="text-2xl md:text-5xl font-semibold leading-[70px] tracking-tighter mb-8 sm:mb-20"
         >
           Effortless Resume
         </Typography>

@@ -25,13 +25,13 @@ const Accordion: React.FC<AccordionProps> = ({
 
   const containerClass = twMerge(
     clsx(
-      'bg-white w-full border p-6 border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden transition-all',
+      'bg-white w-full border p-3 sm:p-6 border-0 border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden transition-all',
       className,
     ),
   );
 
   const headerClass = clsx(
-    'flex items-center justify-between pl-4 cursor-pointer text-base font-medium',
+    'flex items-center justify-between pl-0 sm:pl-4 cursor-pointer text-base font-medium',
     ' dark:bg-gray-800 text-black dark:text-white',
   );
 
@@ -40,7 +40,7 @@ const Accordion: React.FC<AccordionProps> = ({
       <div className={headerClass} onClick={toggleAccordion}>
         <span>{title}</span>
         <motion.span
-          className="text-lg p-3 bg-f8f8f8 rounded-[15px]"
+          className="text-base sm:text-lg p-2 sm:p-3 bg-f8f8f8 rounded-xl sm:rounded-[15px]"
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >

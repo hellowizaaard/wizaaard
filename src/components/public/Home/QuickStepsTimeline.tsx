@@ -25,10 +25,10 @@ const steps = [
 
 const QuickStepsTimeline = () => {
   return (
-    <section className=" px-4 md:px-0">
+    <section className="mt-8 sm:mt-0 px-4 md:px-0">
       <h2 className="text-4xl md:text-5xl font-bold mb-5 text-[#23262F] leading-tight">
         4 Quick steps to use
-        <br />
+        <br className="hidden sm:block" />
         wizaaard for yourself
       </h2>
       <div className="relative py-8 pl-4">

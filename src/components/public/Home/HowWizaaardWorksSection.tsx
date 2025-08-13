@@ -86,7 +86,7 @@ const steps = [
 const HowWizaaardWorksSection = () => {
   return (
     <section className="bg-[#DEE8F0] rounded-2xl mt-10">
-      <div className="fix-width p-6 md:p-10">
+      <div className="fix-width p-4 md:p-10">
         <div className="mb-8 grid grid-cols-12">
           <div className="col-span-2">
             <p className="font-semibold text-sm">Features wizaaard –</p>
