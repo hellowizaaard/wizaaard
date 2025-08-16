@@ -87,12 +87,14 @@ const HowWizaaardWorksSection = () => {
   return (
     <section className="bg-[#DEE8F0] rounded-2xl mt-10">
       <div className="fix-width p-4 md:p-10">
-        <div className="mb-8 grid grid-cols-12">
-          <div className="col-span-2">
-            <p className="font-semibold text-sm">Features wizaaard –</p>
+        <div className="mb-8 lg:grid lg:grid-cols-12">
+          <div className="lg:col-span-2 my-5 lg:my-0">
+            <p className="font-semibold text-sm text-center">
+              Features wizaaard –
+            </p>
           </div>
           <div className="col-span-10">
-            <h2 className="tracking-tighter text-3xl md:text-4xl md:leading-[60px] lg:text-[60px] font-semibold mt-2 mb-4">
+            <h2 className="tracking-tighter text-3xl md:text-4xl md:leading-[60px] lg:text-[60px] font-semibold mb-4">
               How our platform makes your life more easier at expressing
               yourself...
             </h2>
@@ -106,7 +108,7 @@ const HowWizaaardWorksSection = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[100px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[100px]">
           <HowWizaaardWorksCard />
           {steps.map((step, idx) => (
             <StepCard

@@ -14,7 +14,7 @@ const StepCard: React.FC<StepCardProps> = ({
   highlight,
 }) => (
   <div
-    className={`bg-white rounded-[20px] p-6 min-h-[432px] flex flex-col justify-between ${
+    className={`bg-white rounded-[20px] p-6 min-h-[332px] lg:min-h-[432px] flex flex-col justify-between ${
       highlight ? 'shadow-lg' : 'border border-[#E6E8EC]'
     }`}
   >

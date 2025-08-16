@@ -15,14 +15,14 @@ const links = [
 const EffortlessResume = () => {
   return (
     <div className="bg-white p-3 common-border">
-      <div className="bg-f8f8f8 rounded-lg sm:common-border px-2 py-2 sm:py-[25px] sm:px-10">
+      <div className="bg-f8f8f8 rounded-lg lg:common-border px-2 py-2 lg:py-[25px] lg:px-8 xl:px-10">
         <ul className="flex justify-between items-center">
           {links.map((item, index) => (
             <li
               key={index}
               className={`${
                 index === 0
-                  ? 'font-semibold text-xs sm:text-[14px]'
+                  ? 'font-semibold text-xs lg:text-[14px]'
                   : 'effortless-resume-nav'
               }`}
             >

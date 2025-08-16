@@ -30,7 +30,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-[#F2F1F6] rounded-[30px]">
+    <div className="min-h-screen flex flex-col justify-center items-center rounded-[30px]">
       <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold text-center text-gray-800">
           Login
