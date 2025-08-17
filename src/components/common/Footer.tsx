@@ -1,17 +1,16 @@
 'use client';
 
 import React from 'react';
-// import Image from 'next/image';
-// import Link from 'next/link';
+
 import {
-  FaFacebookSquare,
+  // FaFacebookSquare,
   // FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
+  // FaLinkedinIn,
+  // FaYoutube,
   FaPhoneAlt,
   FaEnvelope,
 } from 'react-icons/fa';
-import { TbBrandInstagramFilled } from 'react-icons/tb';
+// import { TbBrandInstagramFilled } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -60,19 +59,19 @@ const Footer = () => {
           >
             <div className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl flex flex-col items-center justify-center h-full w-full">
               <span className="font-semibold mb-2">Facebook</span>
-              <FaFacebookSquare className="text-2xl" />
+              {/* <FaFacebookSquare className="text-2xl" /> */}
             </div>
             <div className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl flex flex-col items-center justify-center h-full w-full">
               <span className="font-semibold mb-2">Instagram</span>
-              <TbBrandInstagramFilled className="text-3xl" />
+              {/* <TbBrandInstagramFilled className="text-3xl" /> */}
             </div>
             <div className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl flex flex-col items-center justify-center h-full w-full">
               <span className="font-semibold mb-2">Linkedin</span>
-              <FaLinkedinIn className="text-2xl" />
+              {/* <FaLinkedinIn className="text-2xl" /> */}
             </div>
             <div className="bg-[#FAFAFA] border border-[#E6E8EC] rounded-xl flex flex-col items-center justify-center h-full w-full">
               <span className="font-semibold mb-2">Youtube</span>
-              <FaYoutube className="text-2xl" />
+              {/* <FaYoutube className="text-2xl" /> */}
             </div>
           </div>
         </div>

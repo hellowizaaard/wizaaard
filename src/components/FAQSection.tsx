@@ -37,12 +37,19 @@ const faqItems: FAQItem[] = [
 ];
 
 export const FAQSection: React.FC = () => {
+  const [activeIndex, setActiveIndex] = React.useState(-1);
+
+  React.useEffect(() => {
+    // Set the first item to be open by default
+    setActiveIndex(0);
+  }, []);
+
   return (
     <section className=" bg-f8f8f8 border border-textGrey rounded-2xl mt-10">
       <div className="fix-width grid grid-cols-1 lg:grid-cols-2 gap-8 p-4 sm:px-10 sm:py-[55px]">
         {/* Left Column - Text and Button */}
         <div className="lg:grid lg:grid-cols-6">
-          <p className="my-5 lg:my-0 lg:col-span-1 text-[18px] font-medium text-center lg:text-left">
+          <p className="my-5 lg:my-0 lg:col-span-1 text-[18px] font-medium lg:text-left">
             FAQs
           </p>
           <div className="col-span-5 sm:col-span-4 flex flex-col">
@@ -68,7 +75,9 @@ export const FAQSection: React.FC = () => {
             <Accordion
               key={index}
               title={item.question}
-              defaultOpen={index === 0 ? true : false}
+              index={index}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
             >
               <p>{item.answer}</p>
             </Accordion>

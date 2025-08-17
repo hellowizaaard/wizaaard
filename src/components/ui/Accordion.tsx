@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import clsx from 'clsx';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -11,17 +11,24 @@ type AccordionProps = {
   children: React.ReactNode;
   defaultOpen?: boolean;
   className?: string;
+  index: number;
+  activeIndex: number;
+  setActiveIndex: (index: number) => void;
 };
 
 const Accordion: React.FC<AccordionProps> = ({
   title,
   children,
-  defaultOpen,
   className,
+  index,
+  activeIndex,
+  setActiveIndex,
 }) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const isOpen = index === activeIndex;
 
-  const toggleAccordion = () => setIsOpen(!isOpen);
+  const toggleAccordion = () => {
+    setActiveIndex(isOpen ? -1 : index);
+  };
 
   const containerClass = twMerge(
     clsx(
@@ -69,7 +76,7 @@ const Accordion: React.FC<AccordionProps> = ({
             }}
             className="overflow-hidden"
           >
-            <div className="p-4 bg-f8f8f8 rounded-[10px] mt-[14px] text-sm text-gray-700 dark:text-gray-300">
+            <div className="p-4 bg-f8f8f8 rounded-[10px] mt-[14px] text-sm">
               {children}
             </div>
           </motion.div>
