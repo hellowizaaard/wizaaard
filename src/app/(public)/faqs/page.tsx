@@ -1,36 +1,6 @@
-import Accordion from '../../../      <div className="mt-9 grid grid-cols-3 gap-4">
-        <Accordion 
-          title="What is StepUp Technology?"
-          index={0}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna, Lorem ipsum dolor
-          sit amet. Lorem olor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor.
-        </Accordion>
+'use client';
 
-        <Accordion 
-          title="Do you support dark mode?"
-          index={1}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          Yes, this accordion is fully dark mode compatible with Tailwind's
-          `dark:` classes.
-        </Accordion>
-
-        <Accordion 
-          title="Can I customize this component?"
-          index={2}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        >
-          100%. Its built to be flexible — update icons, add animations, or nest
-          content as needed.
-        </Accordion>
-      </div>rdion';
+import Accordion from '@/components/ui/Accordion';
 import Input from '../../../components/ui/Input';
 import Typography from '../../../components/ui/Typography';
 import React from 'react';
@@ -63,19 +33,34 @@ const FaqsPage = () => {
         Need answers of your questions? find them here...
       </Typography>
       <div className="mt-9 grid grid-cols-3 gap-4">
-        <Accordion title="What is StepUp Technology?">
+        <Accordion
+          index={1}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          title="What is StepUp Technology?"
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna, Lorem ipsum dolor
           sit amet. Lorem olor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor.
         </Accordion>
 
-        <Accordion title="Do you support dark mode?">
+        <Accordion
+          index={2}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          title="Do you support dark mode?"
+        >
           Yes, this accordion is fully dark mode compatible with Tailwind’s
           `dark:` classes.
         </Accordion>
 
-        <Accordion title="Can I customize this component?">
+        <Accordion
+          index={3}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          title="Can I customize this component?"
+        >
           100%. Its built to be flexible — update icons, add animations, or nest
           content as needed.
         </Accordion>

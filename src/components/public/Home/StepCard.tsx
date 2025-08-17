@@ -19,16 +19,16 @@ const StepCard: React.FC<StepCardProps> = ({
     }`}
   >
     {step && (
-      <div className="mb-[88px]">
-        <span className="inline-block bg-[#F4F4F4] text-[#23262F] text-xs px-3 py-1 rounded-full font-medium">
+      <div className="mb-16 lg:mb-[88px]">
+        <span className="inline-block text-[18px] px-5 py-[10px] border border-textGrey rounded-full font-medium">
           {step}
         </span>
       </div>
     )}
-    <h3 className="text-lg tracking-tighter md:text-xl md:leading-10 lg:text-[36px] font-semibold mb-[68px]">
+    <h3 className="tracking-tighter md:leading-10 text-[36px] font-semibold mb-[48px] lg:mb-[68px]">
       {title}
     </h3>
-    <p className="text-sm">{description}</p>
+    <p className="text-[18px]">{description}</p>
   </div>
 );
 
